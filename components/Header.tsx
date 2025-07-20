@@ -63,10 +63,6 @@ export default function Header() {
               }`}>
               About
             </Link>
-            <Link href="/collections" className={`font-medium transition-colors duration-200 hover:text-red-600 ${scrolled ? 'text-gray-900' : 'text-white hover:text-red-400'
-              }`}>
-              Services
-            </Link>
             <Link href="/portfolio" className={`font-medium transition-colors duration-200 hover:text-red-600 ${scrolled ? 'text-gray-900' : 'text-white hover:text-red-400'
               }`}>
               Portfolio
@@ -104,9 +100,6 @@ export default function Header() {
               </Link>
               <Link href="/about" className="block px-3 py-2 text-gray-900 hover:text-red-600">
                 About
-              </Link>
-              <Link href="/collections" className="block px-3 py-2 text-gray-900 hover:text-red-600">
-                Services
               </Link>
               <Link href="/portfolio" className="block px-3 py-2 text-gray-900 hover:text-red-600">
                 Portfolio

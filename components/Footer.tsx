@@ -48,7 +48,6 @@ export default function Footer() {
             <ul className="space-y-3">
               <li><Link href="/" className="text-gray-300 hover:text-red-400 transition-colors duration-200 cursor-pointer">Home</Link></li>
               <li><Link href="/about" className="text-gray-300 hover:text-red-400 transition-colors duration-200 cursor-pointer">About</Link></li>
-              <li><Link href="/collections" className="text-gray-300 hover:text-red-400 transition-colors duration-200 cursor-pointer">Services</Link></li>
               <li><Link href="/contact" className="text-gray-300 hover:text-red-400 transition-colors duration-200 cursor-pointer">Contact</Link></li>
             </ul>
           </div>
