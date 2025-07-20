@@ -5,7 +5,6 @@ import { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import AboutSection from '../components/AboutSection';
-import ServicesSection from '../components/ServicesSection';
 import Footer from '../components/Footer';
 
 export default function Home() {
@@ -24,7 +23,6 @@ export default function Home() {
       <Header />
       <Hero />
       <AboutSection />
-      <ServicesSection />
       <Footer />
     </div>
   );
