@@ -12,12 +12,13 @@ export default function ContactForm() {
     budget: '',
     message: ''
   });
+
   const [showSuccess, setShowSuccess] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const services = [
     'Creative Concepts',
-    'Digital Branding', 
+    'Digital Branding',
     'Video & Reels',
     'Photography',
     'Content Writing',
@@ -44,12 +45,16 @@ export default function ContactForm() {
         formDataToSend.append(key, value);
       });
 
-      const response = await fetch('https://readdy.ai/api/form-submit', {
+      const response = await fetch('http://localhost:3000/contact', {
         method: 'POST',
         body: formDataToSend
       });
 
       if (response.ok) {
+        await fetch('/api/send-email', {
+          method: 'POST',
+          body: formDataToSend
+        });
         setShowSuccess(true);
         setFormData({
           name: '',
@@ -235,6 +240,27 @@ export default function ContactForm() {
           </div>
         )}
       </div>
+      {showSuccess && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white rounded-xl shadow-xl p-6 max-w-md text-center">
+            <div className="text-green-500 text-4xl mb-2">
+              <i className="ri-checkbox-circle-line"></i>
+            </div>
+            <h3 className="text-lg font-semibold text-gray-800 mb-2">Quote Request Submitted</h3>
+            <p className="text-sm text-gray-600">
+              Thank you for reaching out. We’ve received your request and will get back to you within 24 hours.
+            </p>
+            <button
+              onClick={() => setShowSuccess(false)}
+              className="mt-4 bg-red-600 hover:bg-red-700 text-white px-5 py-2 rounded-md transition"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+
     </section>
+
   );
 }

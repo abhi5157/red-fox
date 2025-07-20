@@ -17,7 +17,7 @@ export default function Contact() {
         <ContactForm />
         <StoreLocation />
       </div>
-      <ContactInfo />
+      {/* <ContactInfo /> */}
       <Footer />
     </div>
   );

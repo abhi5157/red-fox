@@ -66,7 +66,7 @@ export default function TeamSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
-            Meet Our <span style={{ color: '#C4A23F' }}>Master Craftsmen</span>
+            Meet Our <span style={{ color: 'red' }}>Master Craftsmen</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             The skilled artisans and dedicated professionals who bring decades of expertise and passion to every piece we create.
